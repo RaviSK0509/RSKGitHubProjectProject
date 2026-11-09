@@ -18,6 +18,16 @@ services:
     version: "1.0"
   - name: WmSalesforceProvider
     version: 12.0.0.0.25
+- serviceName: project.rskgithubproject.integrations:pushEventSoap
+  packages:
+  - name: RSKGitHubProjectProject
+    version: "1.0"
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.25
+- serviceName: pub.flow:tracePipeline
+  packages:
+  - name: WmPublic
+    version: 12.1.0.0.1328
 - serviceName: project.rskgithubproject.integrations:salesforceSoap
   packages:
   - name: RSKGitHubProjectProject
