@@ -1,6 +1,10 @@
 version: "1.0"
 projectName: RSKGitHubProjectProject
 runtimes:
+- runtimeAlias: APSAERT_sdfsdf
+  assets:
+  - name: RSKGitHubProjectProject.project.rskgithubproject.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.connections:salesforceSoap
+    type: connection
 - runtimeAlias: Cloud Designtime
   assets:
   - name: RSKGitHubProjectProject.project.rskgithubproject.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.listeners:pushEventGit
