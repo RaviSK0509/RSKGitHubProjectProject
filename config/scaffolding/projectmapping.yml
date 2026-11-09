@@ -5,6 +5,8 @@ runtimes:
   assets:
   - name: RSKGitHubProjectProject.project.rskgithubproject.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.connections:salesforceSoap
     type: connection
+  - name: RSKGitHubProjectProject.project.rskgithubproject.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.listeners:pushEventGit
+    type: listener
 - runtimeAlias: Cloud Designtime
   assets:
   - name: RSKGitHubProjectProject.project.rskgithubproject.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.listeners:pushEventGit
