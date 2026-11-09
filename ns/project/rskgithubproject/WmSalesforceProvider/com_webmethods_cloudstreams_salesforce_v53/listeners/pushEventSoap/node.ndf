@@ -23,7 +23,7 @@
       <value name="cx.replayOptions">NEW</value>
       <value name="hp.endpoint">https://d0o000001qr6keac-dev-ed.my.salesforce.com/cometd/53.0</value>
       <value name="hp.userAgent">CloudStreams</value>
-      <value name="eh.callbackServiceName">project.rskgithubproject.integrations.wmSalesforceConnector_v53.util.listener.services:listenerCallBackService</value>
+      <value name="eh.callbackServiceName">project.rskgithubproject.integrations:listenerCallBackService</value>
       <value name="hp.tcpNoDelay">false</value>
       <value name="bu.handshakeRetry">5</value>
       <value name="hp.readTimeout">30000</value>
@@ -33,7 +33,7 @@
       <value name="hp.connectionTimeout">30000</value>
       <value name="bu.maxBackoff">30000</value>
       <value name="bu.handshakeTimeout">30000</value>
-      <value name="eh.runAsUser">Administrator</value>
+      <value name="eh.runAsUser">Administrator|269c23138fb24243bee4bf71c68f1431</value>
       <value name="bu.backoffIncrement">1000</value>
       <value name="hp.followServerRedirects">true</value>
       <value name="eh.isEnabled">true</value>
@@ -65,9 +65,9 @@
       <value name="clusterMode">multiNode</value>
       <record name="action" javaclass="com.wm.util.Values">
         <record name="service" javaclass="com.wm.util.Values">
-          <value name="name">project.rskgithubproject.integrations:salesforceSoap</value>
+          <value name="name">project.rskgithubproject.integrations:pushEventSoap</value>
           <value name="syncMode">false</value>
-          <value name="runAsUser">Administrator</value>
+          <value name="runAsUser">Administrator|269c23138fb24243bee4bf71c68f1431</value>
         </record>
         <record name="log" javaclass="com.wm.util.Values">
           <value name="level">Info</value>
