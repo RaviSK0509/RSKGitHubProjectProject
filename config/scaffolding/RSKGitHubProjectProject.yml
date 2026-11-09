@@ -37,5 +37,7 @@ services:
   - name: WmSalesforceProvider
     version: 12.0.0.0.25
 configurationVariables:
+  ? cloudstreamslistener.RSKGitHubProjectProject.project.rskgithubproject.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.listeners:pushEventSoap.enabled
+  : disabled
   jdbcfunc.SAPTxStore.failFastMode: false
   jdbcfunc.SAPTxStore.connPoolAlias: SAP TxStore Pool
