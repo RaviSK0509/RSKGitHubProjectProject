@@ -8,10 +8,29 @@ packages:
   gitUsername: RaviSK0509
   gitBranch: main
 - name: WmSalesforceProvider
+  version: 12.0.0.0.25
   wpmServer: https://packages.webmethods.io
   wpmRegistry: supported
 services:
 - serviceName: project.rskgithubproject.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.connections:salesforceSoap
+  packages:
+  - name: RSKGitHubProjectProject
+    version: "1.0"
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.25
+- serviceName: project.rskgithubproject.integrations:salesforceSoap
+  packages:
+  - name: RSKGitHubProjectProject
+    version: "1.0"
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.25
+- serviceName: project.rskgithubproject.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.operations.actions:createSFObject
+  packages:
+  - name: RSKGitHubProjectProject
+    version: "1.0"
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.25
+- serviceName: project.rskgithubproject.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.operations.actions:deleteSFObject
   packages:
   - name: RSKGitHubProjectProject
     version: "1.0"
