@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.2" CLEANUP="false">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE NAME="Invoke predefined:com.webmethods.cloudstreams.salesforce_v53" TIMEOUT="" SERVICE="project.rskgithubproject.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.operations.actions:createSFObject" VALIDATE-IN="" VALIDATE-OUT="">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/$connectionAlias;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">project.rskgithubproject.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.connections:salesforceSoap</value>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/createSFObjectInput;2;0/requestBody;2;0/tns:create;2;0/tns:sObjects;2;1/ens:Name;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">SFObject</value>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/createSFObjectInput;2;0/requestHeaders;2;0/tns:AllOrNoneHeader;2;0/tns:allOrNone;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">false</value>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <COMMENT></COMMENT>
+</MAP>
+</INVOKE>
+
+<INVOKE NAME="Invoke predefined:com.webmethods.cloudstreams.salesforce_v53" TIMEOUT="" SERVICE="project.rskgithubproject.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.operations.actions:deleteSFObject" VALIDATE-IN="" VALIDATE-OUT="">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/createSFObjectOutput;2;0/responseBody;2;0/tns:createResponse;2;0/tns:result;2;1/tns:id;1;0" TO="/deleteSFObjectInput;2;0/requestBody;2;0/tns:delete;2;0/tns:ids;1;1">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/$connectionAlias;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">project.rskgithubproject.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.connections:salesforceSoap</value>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <COMMENT></COMMENT>
+</MAP>
+</INVOKE>
+</FLOW>
