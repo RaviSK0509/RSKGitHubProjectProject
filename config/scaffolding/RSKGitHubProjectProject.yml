@@ -7,6 +7,11 @@ packages:
   gitUrl: https://github.com/RaviSK0509
   gitUsername: RaviSK0509
   gitBranch: main
+services:
+- serviceName: project.rskgithubproject.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.connections:salesforceSoap
+  packages:
+  - name: RSKGitHubProjectProject
+    version: "1.0"
 configurationVariables:
   jdbcfunc.SAPTxStore.failFastMode: false
   jdbcfunc.SAPTxStore.connPoolAlias: SAP TxStore Pool
